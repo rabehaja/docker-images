@@ -111,7 +111,6 @@ if (!$IncludeExperimental)
     $availableSpecs = $availableSpecs | Where-Object { !$_.Experimental }
 }
 
-
 $availableTags = $availableSpecs | Select-Object -ExpandProperty Tag
 $defaultTags = $availableTags | Where-Object { $_ -like "mssql-developer:*" -or $_ -like "sitecore-openjdk:*" }
 $xpMiscTags = $availableTags | Where-Object { $_ -like "sitecore-certificates:*" }
@@ -267,11 +266,6 @@ else
     Write-Message "No images need to be built."
     exit
 }
-#Write-Message "tags:$tags"
-#Write-Message "includeSXA: $IncludeSxa"
-#Write-Message "xmSxaTags: $xmSxaTags"
-
-
 
 # restore any missing packages
 SitecoreImageBuilder\Invoke-PackageRestore `
