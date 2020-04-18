@@ -20,7 +20,7 @@ param(
     [string]$RegistryPassword = "",
     [Parameter()]
     [ValidateSet("9.3.0", "9.2.0", "9.1.1", "9.0.2")]
-    [string[]]$SitecoreVersion = @("9.3.0"),
+    [string[]]$SitecoreVersion = @("9.1.1"),
     [ValidateSet("xm", "xp", "xc")]
     [string[]]$Topology = @("xm", "xp"),
     [ValidateSet("2004", "1909", "1903", "ltsc2019", "linux")]
@@ -110,6 +110,7 @@ if (!$IncludeExperimental)
     Write-Message "Excluding experimental images."
     $availableSpecs = $availableSpecs | Where-Object { !$_.Experimental }
 }
+
 
 $availableTags = $availableSpecs | Select-Object -ExpandProperty Tag
 $defaultTags = $availableTags | Where-Object { $_ -like "mssql-developer:*" -or $_ -like "sitecore-openjdk:*" }
@@ -266,6 +267,11 @@ else
     Write-Message "No images need to be built."
     exit
 }
+#Write-Message "tags:$tags"
+#Write-Message "includeSXA: $IncludeSxa"
+#Write-Message "xmSxaTags: $xmSxaTags"
+
+
 
 # restore any missing packages
 SitecoreImageBuilder\Invoke-PackageRestore `
