@@ -1,4 +1,6 @@
 # Changelog
+## July 2020
+- [Added] Sitecore 9.1.1 SXA, SPE, JSS, Automation Engine, Indexworker, Processing Enging images.
 
 ## July 2020
 
