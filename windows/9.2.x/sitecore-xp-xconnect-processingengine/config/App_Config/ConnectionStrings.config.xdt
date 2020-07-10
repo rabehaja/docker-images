@@ -4,7 +4,7 @@
     <add name="processing.engine.tasks" connectionString="user id=sa;password=HASH-epsom-sunset-cost7!;Data Source=sql;Database=Sitecore.Processing.Engine.Tasks" xdt:Transform="SetAttributes" xdt:Locator="Match(name)" />
 	<add name="processing.webapi.blob" connectionString="https://xconnect" xdt:Transform="SetAttributes" xdt:Locator="Match(name)" />
 	<add name="processing.webapi.table" connectionString="https://xconnect" xdt:Transform="SetAttributes" xdt:Locator="Match(name)" />
-	
+
 	<add name="xconnect.collection" connectionString="https://xconnect" xdt:Transform="SetAttributes" xdt:Locator="Match(name)" />
     <add name="xconnect.collection.certificate" connectionString="StoreName=My;StoreLocation=LocalMachine;FindType=FindByThumbprint;FindValue=${xconnect_client_certificate_thumbprint}" xdt:Transform="SetAttributes" xdt:Locator="Match(name)" />
 
