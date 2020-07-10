@@ -15,6 +15,4 @@ windows/tests/**/data/**/*
 
 /.vscode/
 /tools/
-.vs/VSWorkspaceState.json
-.vs/docker-image-loic/v16/.suo
-.vs/slnx.sqlite
+/.vs/
